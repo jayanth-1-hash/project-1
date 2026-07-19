@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mroq2edpcyirg1",
+    "name": "jayanth",
+    "phone": "9100359209",
+    "email": "jayanh450@gmail.com",
+    "interest": "Apartments",
+    "budget": "₹75L - ₹1.5 Cr",
+    "visitDate": "2026-07-18",
+    "message": "kdlmlv",
+    "createdAt": "2026-07-17T09:15:03.373Z",
+    "status": "new"
+  },
+  {
+    "id": "mrrec19a550pmg",
+    "name": "jaynth",
+    "phone": "+919100359209",
+    "email": "yekambaramjayanth@outlook.com",
+    "interest": "Apartments",
+    "budget": "Not specified",
+    "visitDate": "Not specified",
+    "message": "",
+    "createdAt": "2026-07-19T06:09:56.062Z",
+    "status": "new"
+  },
+  {
+    "id": "mrref8ttwzivkk",
+    "name": "jaynth",
+    "phone": "+919100359209",
+    "email": "yekambaramjayanth@outlook.com",
+    "interest": "Apartments",
+    "budget": "Not specified",
+    "visitDate": "Not specified",
+    "message": "",
+    "createdAt": "2026-07-19T06:12:25.841Z",
+    "status": "new"
+  }
+]
