@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "npm install --prefix api && npm install --prefix frontend",
-    "build": "npm run build --prefix frontend",
+    "postinstall": "npm --prefix frontend install && npm --prefix api install",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && node -e \"require('fs').cpSync('frontend/dist', 'dist', {recursive: true, force: true})\"",
     "start": "npm start --prefix api",
     "dev": "concurrently \"npm run dev --prefix api\" \"npm run dev --prefix frontend\""
   },
