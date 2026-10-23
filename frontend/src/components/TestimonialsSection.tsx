@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 const TESTIMONIALS = [
   { quote: "Excellent experience with Hyderabad Homes. Transparent process and great support throughout our home buying journey.", name: "Ramesh Kumar", role: "Resident, Skyline Heights", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuASETJs4N_Wz9TIHzuLYKqVlnF2K7Da_I09T7qvx4EV1_4uY2ubqPKbHW_7YN4qGZWCrD-lXRL_MAsJulZkCY4wJ4WnoGFhiolQ8a0DAjsYWWV84pK5FrsfcnWWqXeb0WUes3F9ARDgtZX4TQLMC25yGnlBh7ZTATYZ6hzPl8WAOu1QmujPEMgGg6Fr4N7NITeib4RTzwmpGpLacG1yZg-UhtQDG0FVzXbvB_9k_01g7MY3gsjs5WJx0Tc80WgyzCTT33h2uABm8pPo" },
@@ -26,7 +26,7 @@ const TESTIMONIALS = [
   { quote: "A beautifully maintained society. The housekeeping staff does an incredible job daily.", name: "Neha Bhatia", role: "Resident, The Summit Commercial", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuASETJs4N_Wz9TIHzuLYKqVlnF2K7Da_I09T7qvx4EV1_4uY2ubqPKbHW_7YN4qGZWCrD-lXRL_MAsJulZkCY4wJ4WnoGFhiolQ8a0DAjsYWWV84pK5FrsfcnWWqXeb0WUes3F9ARDgtZX4TQLMC25yGnlBh7ZTATYZ6hzPl8WAOu1QmujPEMgGg6Fr4N7NITeib4RTzwmpGpLacG1yZg-UhtQDG0FVzXbvB_9k_01g7MY3gsjs5WJx0Tc80WgyzCTT33h2uABm8pPo" },
   { quote: "Great value for money. The location is prime and the property value has already appreciated.", name: "Rahul Deshmukh", role: "Investor, Riverfront Elite", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBhUm8uJixHbSMxoCszFPRqTEooQCmFTwnBRt16rEW4dWWkxpnVSAp24eX39-ITaHJn-j56AeWUg9oF6lkiVQzdW4H_Afk9lcGv7xFknOF5yyk73ECo3CKs_ePSYfAoZllyaPF0wHpDCQbFAp8ZKsobjNTydVrfBS7VATVFu8qo0y2LxHfmtbSnDrOp3M1DhTFFVui8cgyA-ZEevAk5LORjPpAIsArSx9wnhpkg5Hg5KADdBV1yIKlDrFZML83RoVhIQK8f9DY4EiTh" },
   { quote: "So glad we chose this property. The build quality gives us peace of mind for decades to come.", name: "Simran Kaur", role: "Resident, Industrial Lofts", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC_lzW_8e1dPfe2KYpkifCD1c34ebX9grnVTMXiwXfT9KzYkA7Yl0zZPrHnz0j8Yu1Wei1qfHwv0Y1VkSPtqP3ny6d5RNjYwdAKU-PtSvGa0VBRf66KQLyzhA4XJc3DU8ygEua_34EFXi5ubFhWMqAwGdKAXvOGhq8A49zxmT-JTqlWblFgIAIx7TY3nM0iwnxk9bN0q9LsQGvKxKeGX_xsMG7JiybGyFCM8TiD0icoAmih7Wi3hCn8NWsar3uZuwD7F9fAAXhVcYe4" },
-];export function TestimonialsSection() {
+]; export function TestimonialsSection() {
   const avatars = ["/avatar_1.png", "/avatar_2.png", "/avatar_3.png"];
   const [showAll, setShowAll] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
@@ -42,7 +42,7 @@ const TESTIMONIALS = [
 
   return (
     <section className="py-8 md:py-12 bg-primary text-on-primary overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-grid-margin">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-grid-margin">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-10 gap-4 md:gap-8">
           <div className="max-w-xl text-center md:text-left">
             <span className="font-label-sm text-[10px] md:text-xs text-primary-fixed uppercase tracking-widest mb-2 md:mb-4 block">Testimonials</span>
@@ -90,7 +90,7 @@ const TESTIMONIALS = [
             `}</style>
             <div
               className="flex gap-4 md:gap-6 w-max marquee-track"
-              style={{ 
+              style={{
                 animation: 'marqueeScrollTestimonials 150s linear infinite',
                 animationPlayState: activeCardIndex !== null ? 'paused' : 'running'
               }}

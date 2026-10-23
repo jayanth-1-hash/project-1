@@ -16,7 +16,7 @@ export function HeroSection({ onBookSiteVisit }: { onBookSiteVisit?: () => void 
         <div className="absolute inset-0 bg-[#154734]/60 mix-blend-multiply"></div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-grid-margin relative z-10 w-full py-16 text-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-grid-margin relative z-10 w-full py-12 sm:py-16 text-center">
         <style>{`
           @keyframes fadeUpDelay {
             from { opacity: 0; transform: translateY(20px); }
@@ -63,36 +63,36 @@ export function HeroSection({ onBookSiteVisit }: { onBookSiteVisit?: () => void 
               Helping families discover premium homes, villas, apartments and investment opportunities across Hyderabad's most sought-after neighborhoods.
             </p>
           </div>
-          <div className="flex flex-row justify-center gap-2 md:gap-4 w-full max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center gap-2.5 sm:gap-4 w-full max-w-md mx-auto">
             <button
               onClick={() => onBookSiteVisit ? onBookSiteVisit() : document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="animate-zoom-in-1 flex-1 bg-primary-fixed text-on-primary-fixed px-2 md:px-6 py-2.5 md:py-3 rounded-[10px] md:rounded-[12px] font-label-sm uppercase tracking-wider md:tracking-widest flex justify-center items-center gap-1 md:gap-2 group transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 active:bg-primary active:text-white duration-300 text-[10px] md:text-sm">
-              Book Site Visit
-              <span className="material-symbols-outlined text-[14px] md:text-[18px] transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+              className="animate-zoom-in-1 w-full sm:flex-1 bg-primary-fixed text-on-primary-fixed px-4 sm:px-6 py-3 rounded-xl font-label-sm uppercase tracking-wider flex justify-center items-center gap-2 group transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 active:bg-primary active:text-white duration-300 text-xs sm:text-sm min-h-[46px]">
+              <span>Book Site Visit</span>
+              <span className="material-symbols-outlined text-[16px] sm:text-[18px] transition-transform group-hover:translate-x-1">arrow_right_alt</span>
             </button>
             <button
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="animate-zoom-in-2 flex-1 border border-white/40 text-white px-2 md:px-6 py-2.5 md:py-3 rounded-[10px] md:rounded-[12px] font-label-sm uppercase tracking-wider md:tracking-widest hover:bg-white/10 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl backdrop-blur-sm active:scale-95 active:bg-white/20 duration-300 text-[10px] md:text-sm">
-              Explore Projects
+              className="animate-zoom-in-2 w-full sm:flex-1 border border-white/40 text-white px-4 sm:px-6 py-3 rounded-xl font-label-sm uppercase tracking-wider hover:bg-white/10 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl backdrop-blur-sm active:scale-95 active:bg-white/20 duration-300 text-xs sm:text-sm min-h-[46px]">
+              <span>Explore Projects</span>
             </button>
           </div>
-          <div className="flex flex-wrap justify-center md:flex-nowrap md:justify-between items-start md:items-center gap-4 md:gap-8 pt-8 w-full max-w-lg mx-auto">
-            <div className="animate-zoom-in-3 flex-1 min-w-[100px]">
-              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-2 group cursor-pointer p-1 md:p-2 -m-2 rounded-xl transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:scale-105 hover:shadow-lg active:scale-95 active:bg-white/20">
-                <span className="material-symbols-outlined text-tertiary-fixed-dim transition-all duration-300 group-hover:scale-110 group-hover:text-white group-active:text-white drop-shadow-md text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>verified</span>
-                <span className="font-label-sm text-[10px] sm:text-xs md:text-sm text-white/80 transition-all duration-300 group-hover:text-white group-active:text-white md:group-hover:translate-x-1 text-center md:text-left leading-tight">Trusted Developers</span>
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-6 sm:pt-8 w-full max-w-lg mx-auto">
+            <div className="animate-zoom-in-3">
+              <div className="flex flex-col items-center justify-center gap-1 group cursor-pointer p-2 rounded-xl transition-all duration-300 hover:bg-white/10 active:scale-95">
+                <span className="material-symbols-outlined text-tertiary-fixed-dim text-[20px] sm:text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>verified</span>
+                <span className="text-[10px] sm:text-xs text-white/90 text-center font-medium leading-tight">Trusted Developers</span>
               </div>
             </div>
-            <div className="animate-zoom-in-4 flex-1 min-w-[100px]">
-              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-2 group cursor-pointer p-1 md:p-2 -m-2 rounded-xl transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:scale-105 hover:shadow-lg active:scale-95 active:bg-white/20">
-                <span className="material-symbols-outlined text-tertiary-fixed-dim transition-all duration-300 group-hover:scale-110 group-hover:text-white group-active:text-white drop-shadow-md text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>approval_delegation</span>
-                <span className="font-label-sm text-[10px] sm:text-xs md:text-sm text-white/80 transition-all duration-300 group-hover:text-white group-active:text-white md:group-hover:translate-x-1 text-center md:text-left leading-tight">RERA Approved</span>
+            <div className="animate-zoom-in-4">
+              <div className="flex flex-col items-center justify-center gap-1 group cursor-pointer p-2 rounded-xl transition-all duration-300 hover:bg-white/10 active:scale-95">
+                <span className="material-symbols-outlined text-tertiary-fixed-dim text-[20px] sm:text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>approval_delegation</span>
+                <span className="text-[10px] sm:text-xs text-white/90 text-center font-medium leading-tight">RERA Approved</span>
               </div>
             </div>
-            <div className="animate-zoom-in-5 flex-1 min-w-[100px]">
-              <div className="flex flex-col md:flex-row items-center justify-start gap-1 md:gap-2 group cursor-pointer p-1 md:p-2 -m-2 rounded-xl transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:scale-105 hover:shadow-lg active:scale-95 active:bg-white/20">
-                <span className="material-symbols-outlined text-tertiary-fixed-dim transition-all duration-300 group-hover:scale-110 group-hover:text-white group-active:text-white drop-shadow-md text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>location_on</span>
-                <span className="font-label-sm text-[10px] sm:text-xs md:text-sm text-white/80 transition-all duration-300 group-hover:text-white group-active:text-white md:group-hover:translate-x-1 text-center md:text-left leading-tight">Prime Locations</span>
+            <div className="animate-zoom-in-5">
+              <div className="flex flex-col items-center justify-center gap-1 group cursor-pointer p-2 rounded-xl transition-all duration-300 hover:bg-white/10 active:scale-95">
+                <span className="material-symbols-outlined text-tertiary-fixed-dim text-[20px] sm:text-[24px]" style={{ fontVariationSettings: '"FILL" 1' }}>location_on</span>
+                <span className="text-[10px] sm:text-xs text-white/90 text-center font-medium leading-tight">Prime Locations</span>
               </div>
             </div>
           </div>

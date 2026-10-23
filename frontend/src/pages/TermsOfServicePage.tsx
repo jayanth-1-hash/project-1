@@ -1,0 +1,214 @@
+import { useEffect } from 'react';
+import { navigateTo } from '../utils/navigation';
+import { BrandLogo } from '../components/BrandLogo';
+
+export function TermsOfServicePage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.title = 'Terms of Service • Hyderabad Homes Legal & Compliance';
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#FBFBFA] text-[#1E2522] flex flex-col font-sans selection:bg-primary selection:text-white">
+      {/* ─── LUXURY TOP NAVBAR ────────────────────────────────────────────── */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-outline-variant/30 shadow-xs">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 h-18 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => navigateTo('/')}
+              className="flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary hover:text-tertiary bg-surface-container/60 hover:bg-surface-container px-3.5 py-2 rounded-xl transition-all border border-outline-variant/20 active:scale-95"
+            >
+              <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+              <span>Back to Home</span>
+            </button>
+            <div className="h-6 w-px bg-outline-variant/30 hidden sm:block" />
+            <div className="hidden sm:flex items-center">
+              <BrandLogo size="sm" variant="dark" showTagline={false} />
+            </div>
+          </div>
+
+          {/* Quick Legal Switcher */}
+          <div className="flex items-center gap-2 text-xs">
+            <span className="bg-blue-100 text-blue-900 font-bold px-2.5 py-1 rounded-full text-[10px] hidden md:flex items-center gap-1">
+              <span className="material-symbols-outlined text-[14px]">gavel</span>
+              <span>Indian Contract Act, 1872 Compliant</span>
+            </span>
+            <button
+              onClick={() => navigateTo('/privacy-policy')}
+              className="text-on-surface-variant hover:text-primary px-2.5 py-1.5 font-semibold text-xs transition-colors"
+            >
+              Privacy Policy
+            </button>
+            <button
+              onClick={() => navigateTo('/rera-compliance')}
+              className="text-on-surface-variant hover:text-primary px-2.5 py-1.5 font-semibold text-xs transition-colors"
+            >
+              RERA Compliance
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ─── HERO HEADER ─────────────────────────────────────────────────── */}
+      <section className="bg-primary text-white py-12 md:py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+        <div className="max-w-4xl mx-auto px-6 relative z-10 space-y-3">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider text-blue-300 border border-white/10">
+            <span className="material-symbols-outlined text-[16px]">contract</span>
+            <span>Electronic User Agreement</span>
+          </div>
+          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight">
+            Terms of Service & Advisory Conditions
+          </h1>
+          <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
+            Legally binding electronic contract under Section 10A of the Information Technology Act, 2000 and Section 10 of the Indian Contract Act, 1872.
+          </p>
+          <div className="text-[11px] text-white/60 pt-2 flex items-center gap-4 flex-wrap">
+            <span>Effective Date: 1st January 2024</span>
+            <span>•</span>
+            <span>Last Updated: 22nd October 2026</span>
+            <span>•</span>
+            <span>Arbitration Seat: Hyderabad, Telangana</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MAIN LEGAL DOCUMENT BODY ────────────────────────────────────── */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-14 space-y-8 sm:space-y-10 leading-relaxed text-xs sm:text-sm text-on-surface">
+        
+        {/* Section 1 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">01.</span>
+            <span>Electronic Record & Acceptance of Terms</span>
+          </h2>
+          <p>
+            This electronic document is an electronic record in terms of the Information Technology Act, 2000 and rules thereunder as applicable, and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. This electronic record is generated by a computer system and does not require any physical or digital signatures.
+          </p>
+          <p>
+            By accessing, browsing, submitting inquiries, booking site visits, or otherwise using the website <strong>www.hyderabadhomes.com</strong> (the "Platform"), operated by Hyderabad Homes Real Estate Advisory Private Limited, you unequivocally agree to be bound by these Terms of Service. If you do not agree, please refrain from using the Platform.
+          </p>
+        </section>
+
+        {/* Section 2 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">02.</span>
+            <span>Legal Competence to Contract (Section 11, Indian Contract Act)</span>
+          </h2>
+          <p>
+            You represent and warrant that you are at least eighteen (18) years of age, of sound mind, and fully competent to enter into a legally binding contract under Section 11 of the <strong>Indian Contract Act, 1872</strong>. If you are browsing on behalf of a corporate entity, Hindu Undivided Family (HUF), or partnership firm, you warrant that you hold express authorization and power of attorney to bind such entity.
+          </p>
+        </section>
+
+        {/* Section 3 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">03.</span>
+            <span>Platform Role & RERA Channel Partner Status</span>
+          </h2>
+          <p>
+            Hyderabad Homes operates as an authorized, registered Real Estate Agent / Channel Partner under the <strong>Telangana State Real Estate Regulatory Authority (TSRERA Registration: A02400000412)</strong>.
+          </p>
+          <ul className="list-disc pl-5 space-y-1.5">
+            <li><strong>Marketing & Advisory Intermediary:</strong> Hyderabad Homes connects verified home buyers and investors with TS-RERA registered developers. Hyderabad Homes is not the promoter, builder, or constructor of the listed developments, unless explicitly designated as such in statutory project documentation.</li>
+            <li><strong>Sanction Verification:</strong> While all 20 featured landmark projects undergo RERA credential verification, buyers are strictly advised to inspect the original Title Deeds, Encumbrance Certificates (EC), and Sanction Plans directly with the respective developer prior to execution of any Agreement for Sale.</li>
+          </ul>
+        </section>
+
+        {/* Section 4 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">04.</span>
+            <span>Site Visit Booking & 2-Leads Slot Capacity Mechanism</span>
+          </h2>
+          <p>
+            To deliver an uncompromised luxury experience, our proprietary scheduling system enforces a strict maximum capacity of <strong>two (2) verified customer leads per time slot per calendar date</strong>:
+          </p>
+          <div className="bg-surface p-4 rounded-2xl border border-outline-variant/30 space-y-2 text-xs">
+            <div>• <strong>Fair Slot Allocation:</strong> When two leads are booked for a given time slot (e.g. 10:00 AM - 12:00 PM), the slot is automatically locked. No third booking can be accepted until an open slot or alternate date is selected.</div>
+            <div>• <strong>Slot Release on Status Update:</strong> If an active inquiry is marked as "Closed", "Converted", or cancelled by our dispatch managers or customer request, the occupied slot is automatically returned to available status in real time.</div>
+            <div>• <strong>Complimentary Cab Pickup:</strong> AC Chauffeur transportation provided as part of VIP tours is a courtesy amenity subject to location feasibility and driver availability within the Hyderabad Metropolitan Development Authority (HMDA) operational boundary.</div>
+          </div>
+        </section>
+
+        {/* Section 5 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">05.</span>
+            <span>Accuracy of Information & Architectural Disclaimers</span>
+          </h2>
+          <p>
+            All architectural elevations, walkthrough 3D videos, floor layouts, specifications, and artist impressions displayed on the Platform are conceptual guides shared by the respective developers. Under Section 14 of the RERA Act 2016, final deliverables, carpet areas, and fixtures shall strictly adhere to the registered Agreement for Sale and TSRERA sanctioned structural specifications.
+          </p>
+          <p>
+            Prices quoted (e.g. ₹3.85 Cr, ₹85 Lakhs) reflect base price guidance provided by developers at the time of cataloging. Statutory government charges including Stamp Duty, Registration Fees, GST, Electricity & Water infrastructure charges, and Club Maintenance are additional as per prevailing Telangana State fiscal notifications.
+          </p>
+        </section>
+
+        {/* Section 6 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">06.</span>
+            <span>Intellectual Property & Trademark Rights</span>
+          </h2>
+          <p>
+            All content, brand design tokens, digital styling, typography, codebases, graphics, logos, and curated project dossiers on this Platform are the exclusive intellectual property of Hyderabad Homes Pvt. Ltd., protected under the <strong>Copyright Act, 1957</strong> and the <strong>Trade Marks Act, 1999</strong> of India. No part of this Platform may be scraped, mirrored, reproduced, or exploited for commercial syndication without prior written permission.
+          </p>
+        </section>
+
+        {/* Section 7 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">07.</span>
+            <span>Limitation of Liability & Indemnity</span>
+          </h2>
+          <p>
+            To the maximum extent permitted by Indian law, Hyderabad Homes, its directors, officers, and employees shall not be liable for any indirect, incidental, punitive, or consequential damages resulting from delays in developer construction timelines, changes in municipal zoning by HMDA/GHMC, or market fluctuations. You agree to indemnify and hold harmless Hyderabad Homes against any claims arising from your breach of these Terms or violation of any Indian law.
+          </p>
+        </section>
+
+        {/* Section 8 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">08.</span>
+            <span>Dispute Resolution & Sole Arbitration</span>
+          </h2>
+          <p>
+            Any dispute, controversy, or claim arising out of or relating to this electronic contract, including its formation, validity, or termination, shall be referred to and finally resolved by <strong>Sole Arbitration in accordance with the Arbitration and Conciliation Act, 1996</strong>. The seat and venue of arbitration shall be <strong>Hyderabad, Telangana, India</strong>, and proceedings shall be conducted in the English language.
+          </p>
+        </section>
+
+        {/* Section 9 */}
+        <section className="space-y-3">
+          <h2 className="text-base sm:text-lg font-bold text-primary flex items-center gap-2 border-b border-outline-variant/30 pb-2">
+            <span className="text-tertiary font-mono">09.</span>
+            <span>Exclusive Court Jurisdiction</span>
+          </h2>
+          <p>
+            Subject to the arbitration clause above, the competent Civil Courts located in <strong>Hyderabad, Telangana, India</strong> shall have exclusive jurisdiction over all legal disputes arising out of these Terms.
+          </p>
+        </section>
+
+        {/* Bottom Navigation CTAs */}
+        <div className="pt-6 border-t border-outline-variant/30 flex items-center justify-between flex-wrap gap-3">
+          <button
+            onClick={() => navigateTo('/rera-compliance')}
+            className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-tertiary transition-colors"
+          >
+            <span>Inspect RERA Compliance & Project Numbers</span>
+            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+
+          <button
+            onClick={() => navigateTo('/contact-us')}
+            className="flex items-center gap-1.5 text-xs font-bold bg-primary text-white px-4 py-2 rounded-xl hover:bg-tertiary transition-all"
+          >
+            <span>Legal Counsel Assistance</span>
+            <span className="material-symbols-outlined text-[16px]">mail</span>
+          </button>
+        </div>
+      </main>
+    </div>
+  );
+}

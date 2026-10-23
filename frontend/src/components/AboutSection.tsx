@@ -77,7 +77,7 @@ export function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-section-gap-mobile md:py-section-gap-desktop max-w-[1440px] mx-auto px-6 md:px-grid-margin opacity-0 translate-y-10 transition-all duration-1000 ease-out [&.animate-in]:opacity-100 [&.animate-in]:translate-y-0"
+      className="py-section-gap-mobile md:py-section-gap-desktop max-w-[1440px] mx-auto px-4 sm:px-6 md:px-grid-margin opacity-0 translate-y-10 transition-all duration-1000 ease-out [&.animate-in]:opacity-100 [&.animate-in]:translate-y-0"
       id="about"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -145,8 +145,8 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* Custom animation keyframe */}
-      <style>{`
+        {/* Custom animation keyframe */}
+        <style>{`
         @keyframes bounce-slow {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-8px); }
